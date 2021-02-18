@@ -158,8 +158,10 @@ class elfin:
     def MoveCL(self, target):
         """
         function: Circular motion
-        :param: MoveCL,rbtID,AtualCoord[X,Y,Z],GoalCoord[X,Y,Z,RX,RY,RZ],dCircleCnt[number of circles>1],Type[0 or 1],;
+        :param: MoveCL,rbtID,Through position[X,Y,Z],GoalCoord[X,Y,Z,RX,RY,RZ],dCircleCnt[number of circles>1],Type[0 or 1],;
         :return:
+        Obs: Type 0: unconstrained
+        Type 1: the movemente is defined by the first point
         """
         target = [str(s) for s in target]
         target = (",".join(target))
@@ -169,8 +171,10 @@ class elfin:
     def MoveC(self, target):
         """
         function: Arc motion
-        :param: MoveCL,rbtID,AtualCoord[X,Y,Z],GoalCoord[X,Y,Z,RX,RY,RZ],Type[0 or 1],;
+        :param: MoveCL,rbtID,Through position[X,Y,Z],GoalCoord[X,Y,Z,RX,RY,RZ],Type[0 or 1],;
         :return:
+        Obs: Type 0: unconstrained
+        Type 1: the movemente is defined by the first point
         """
         target = [str(s) for s in target]
         target = (",".join(target))
@@ -203,7 +207,7 @@ class elfin:
     def MoveRelL(self, target):
         """"
         Function: Robot moves a certain distance from the specified spatial coordinate direction
-        :param:  MoveRelL,rbtID,Spatial coordinate direction ID,Movement direction:0=negative;1=positive,Relative motion distance
+        :param:   Spatial coordinate direction ID,Movement direction:0=negative;1=positive,Relative motion distance
         :return:
         """
         target = [str(s) for s in target]
@@ -214,7 +218,7 @@ class elfin:
     def MoveRelJ(self, target):
         """"
         Function: Robot moves a certain distance from the specified angular coordinate direction
-        :param:  MoveRelL,rbtID,Angular coordinate direction ID,Movement direction:0=negative;1=positive,Relative motion distance[degree]
+        :param: Angular coordinate direction ID,Movement direction:0=negative;1=positive,Relative motion distance[degree]
         :return:
         """
         target = [str(s) for s in target]
