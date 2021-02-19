@@ -158,7 +158,7 @@ class elfin:
     def MoveCL(self, target):
         """
         function: Circular motion
-        :param: MoveCL,rbtID,Through position[X,Y,Z],GoalCoord[X,Y,Z,RX,RY,RZ],dCircleCnt[number of circles>1],Type[0 or 1],;
+        :param: Through position[X,Y,Z],GoalCoord[X,Y,Z,RX,RY,RZ],dCircleCnt[number of circles>1],Type[0 or 1],;
         :return:
         Obs: Type 0: unconstrained
         Type 1: the movemente is defined by the first point
@@ -171,7 +171,7 @@ class elfin:
     def MoveC(self, target):
         """
         function: Arc motion
-        :param: MoveCL,rbtID,Through position[X,Y,Z],GoalCoord[X,Y,Z,RX,RY,RZ],Type[0 or 1],;
+        :param: Through position[X,Y,Z],GoalCoord[X,Y,Z,RX,RY,RZ],Type[0 or 1],;
         :return:
         Obs: Type 0: unconstrained
         Type 1: the movemente is defined by the first point
@@ -184,7 +184,7 @@ class elfin:
     def MoveJ(self, target):
         """"
         Function: Robot moves to the specified angular coordinate position
-        Format: MoveJ,rbtID,J1,J2,J3,J4,J5,J6,;
+        Format: J1,J2,J3,J4,J5,J6,;
         :param: target:[X,Y,Z,RX,RY,RZ]
         :return:
         """
